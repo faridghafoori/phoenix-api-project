@@ -11,9 +11,11 @@ defmodule PhoenixApiProjectWeb.PostView do
   end
 
   def render("post.json", %{post: post}) do
-    %{id: post.id,
+    %{
+      id: post.id,
       title: post.title,
       description: post.description,
-      name: post.name}
+      name: post.name
+    }
   end
 end

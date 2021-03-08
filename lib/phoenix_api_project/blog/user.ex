@@ -5,6 +5,7 @@ defmodule PhoenixApiProject.Blog.User do
   schema "users" do
     field :email, :string
     field :name, :string
+    has_many :posts, PhoenixApiProject.Blog.Post
 
     timestamps()
   end

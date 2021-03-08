@@ -6,9 +6,10 @@ defmodule PhoenixApiProject.Repo.Migrations.CreatePosts do
       add :title, :string
       add :description, :text
       add :name, :string
+      add :user_id, references(:users, on_delete: :nothing)
 
       timestamps()
     end
-
+    create index(:posts, [:user_id])
   end
 end

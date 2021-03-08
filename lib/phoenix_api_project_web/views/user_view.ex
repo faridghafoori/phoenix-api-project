@@ -14,7 +14,8 @@ defmodule PhoenixApiProjectWeb.UserView do
     %{
       id: user.id,
       email: user.email,
-      name: user.name
+      name: user.name,
+      posts: render_many(user.posts, PhoenixApiProjectWeb.PostView, "post.json"),
     }
   end
 end
