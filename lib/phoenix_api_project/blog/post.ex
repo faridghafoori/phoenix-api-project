@@ -7,6 +7,7 @@ defmodule PhoenixApiProject.Blog.Post do
     field :name, :string
     field :title, :string
     belongs_to :user, PhoenixApiProject.Blog.User
+    has_many :tags, PhoenixApiProject.Blog.Tag
 
     timestamps()
   end
